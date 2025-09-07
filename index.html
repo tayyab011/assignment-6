@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BBC BANGLA</title>
+    <title></title>
     <style>
       
     </style>
@@ -12,8 +12,9 @@
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
+   <!--  headerpart &&  hero section  -->
   <header>
-      <div class="navbar bg-[#15803D] shadow-sm">
+   <div class="navbar bg-[#15803D] shadow-sm">
   <div class="navbar-start">
     <div class="dropdown">
       <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -42,20 +43,165 @@
     <a class="btn bg-[#FACC15] text-[#15803D] px-5 border-0 rounded-full shadow-none">Plant a Tree</a>
   </div>
 </div>
+<section class="grid grid-cols-1 md:grid-cols-12 bg-[#CFF0DC] h-auto">
+<div class="col-span-12 md:col-span-3 mx-auto">
+    <img src="./assets/hero-leaf1.png" alt="" class="w-70 md:w-full">
+</div>
+<div class="col-span-12 md:col-span-6 ">
+
+  <div class="hero-content text-center pt-12">
+    <div class="space-y-3">
+      <h1 class="md:text-4xl text-2xl  font-bold">Plant a Tree, Grow a Future</h1>
+      <p class="md:text-[15px] text-[12px]">
+      Join our mission to plant 1 million trees and make the Earth greener for future
+generations.
+      </p>
+      <button class="btn md:btn btn-sm bg-[#FACC15] text-[#15803D] px-5 border-0 rounded-full shadow-none">Get Involved</button>
+    </div>
+ 
+</div>
+</div>
+<div class="col-span-12 md:col-span-3 mx-auto ">
+    <img src="./assets/hero-leaf2.png" alt="" class="w-70 md:w-full">
+</div>
+
+</section>
   </header>
 
 
 
+<main class="bg-[#F0FDF4] py-6">
+   
+<section class="min-h-screen  p-6">
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+
+    <!-- Sidebar Categories -->
+    <aside class="md:col-span-2  rounded-xl p-4 ">
+      <h2 class="text-lg font-semibold mb-4">Categories</h2>
+      <ul id="navCategoryContainer" class="space-y-2">
+       
+        
+     
+      </ul>
+    </aside>
+
+    <!-- Product Grid -->
+    <div class="md:col-span-8">
+      <h1 class="text-2xl font-bold text-center mb-6">Choose Your Trees</h1>
+
+      <div id="treeCardParent" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <!-- Card Item -->
+        
+
+        
+
+        
+      </div>
+    </div>
+
+    <!-- history Section -->
+    <aside class="md:col-span-2 sm:col-span-3 md:bg-white sm:bg-red-400 rounded-xl p-4 shadow-sm">
+      <h2 class="text-lg font-semibold mb-4">Your Cart</h2>
+      <ul class="space-y-2">
+        <li class="flex justify-between items-center text-sm">
+          <span >Mango Tree</span>
+          <span >$1500 × 1</span>
+        </li>
+        <li class="flex justify-between items-center text-sm">
+          <span>Guava Tree</span>
+          <span>$1000 × 1</span>
+        </li>
+      </ul>
+      <div class="divider"></div>
+      <div class="flex justify-between font-bold text-sm">
+        <span>Total:</span>
+        <span>$2500</span>
+      </div>
+    </aside>
+
+  </div>
+</section>
+
+
+
+<section class="my-10">
+    <h2 class="text-center font-semibold md:text-4xl text-3xl mb-6">About the Campaign</h2>
+    <div class="hero  text-base">
+  <div class="hero-content flex-col md:flex-row max-w-[950px] mx-auto">
+    <img
+      src="./assets/about.png"
+      class=" md:w-[40%] md:h-[50%] w-[60%]   rounded-lg "
+    />
+    <div class="md:w-[50%]">
+     
+      <p class="py-6 md:text-base text-sm">
+        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+        quasi. In deleniti eaque aut repudiandae et a id nisi.
+      </p> 
+      <ul class="list-disc list-inside pl-4">
+        <li>Restoration of natural habitats</li>
+       <li>Improvement of air quality</li>
+       <li>Support for local communities</li>
+      </ul>
+     
+    </div>
+  </div>
+</div>
+</section>
+
+</main>
+
+
+<section class="bg-[#CFF0DC]">
+<h2 class="text-center pt-20  font-semibold md:text-4xl text-3xl mb-6">Our Impact</h2>
+<div class="max-w-11/12 py-12 mx-auto grid grid-cols-1 md:grid-cols-3 md:gap-14 gap-y-5">
+<div class="bg-white text-center space-y-3 p-6 rounded-2xl">
+ <h3 class="text-2xl text-[#15803D] font-semibold">500K+</h3>
+ <p class="font-normal">Trees Planted</p>
+</div>
+<div class="bg-white text-center space-y-3 p-6 rounded-2xl">
+ <h3 class="text-2xl text-[#15803D] font-semibold">120K+</h3>
+ <p class="font-normal">Countries Involved</p>
+</div>
+<div class="bg-white text-center space-y-3 p-6 rounded-2xl">
+ <h3 class="text-2xl text-[#15803D] font-semibold">30K+</h3>
+ <p class="font-normal">Countries Reached</p>
+</div>
+
+</div>
+</section>
 
 
 
 
 
 
-
-
-
-
+<footer class="bg-[#166534]">
+<h3 class="text-center pt-12 text-white  font-semibold md:text-4xl text-3xl ">Plant a Tree Today</h3>
+<div class="flex justify-center py-12">
+  <div class=" bg-[#15803D] w-full max-w-sm shrink-0 shadow-2xl rounded-[10px]">
+      <div class="mx-auto">
+        <fieldset class="fieldset flex flex-col justify-center items-center mx-9 my-3">
+          
+          <input type="email" class="input w-full" placeholder="Your Name" />
+        
+          <input type="password" class="input w-full" placeholder="Your Email Address " />
+          <select class="select w-full">
+    <option disabled selected>Number of Trees</option>
+    <option>Mango Tree</option>
+    <option>pinaple tree</option>
+    <option>Safari tree</option>
+  </select>
+      
+          <button class="btn bg-[#FACC15] border-0 text-[#15803D] rounded-full mt-4 w-full shadow-none">Donate Now</button>
+        </fieldset>
+      </div>
+    </div>
+</div>
+<div class="bg-black">
+<h6 class="text-center text-white py-6">© 2025 Green Earth. All Rights Reserved.</h6>
+</div>
+</footer>
 
 
     <script src="./script.js"></script>
