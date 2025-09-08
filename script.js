@@ -20,7 +20,8 @@ for (let i of actives) {
     
 }
       const catActive = document.getElementById(`cat${id}`);
-      catActive.classList.add("bg-[#15803D]" , "text-white");
+  
+       catActive.classList.add("bg-[#15803D]" , "text-white");
  }
  //1 showCategory Trees navbar
  const showCategoryNavbarTrees =(navdata)=>{
@@ -28,12 +29,33 @@ for (let i of actives) {
    
 navdata.forEach(element => {
    navCategoryContainer.innerHTML += `
+    
     <li id="cat${element.id}" class="btn btn-sm sm:px-2 sm:py-2 md:w-full w-[80%] sm:w-[60%] justify-start actives" onclick="loadCategoryCardTreesByiD(${element.id})">${element.category_name}</li>
    `;
 });
  }
 
+//modal part Show card details in modal
+const loadForTreesDetails=(id)=>{
+ fetch(`https://openapi.programming-hero.com/api/plant/${id}`)
+   .then((res) => res.json())
+   .then((data) => showModalInDetails(data.plants));
+}
 
+//show details on modal
+const showModalInDetails =(data)=>{
+const detailsContainer = document.getElementById("detailsContainer");
+detailsContainer.innerHTML = `
+ <div>
+      <h2 class="text-xl font-bold mb-4">${data.name}</h2>
+     <img src="${data.image}" class="h-46 w-[100%] object-fit-cover" />
+      <p class="mb-2 mt-5"><span class="font-bold">Category: </span>${data.category} </p>
+      <p class="mb-2"><span class="font-bold">Price: </span>$${data.price} </p>
+      <p class="mb-2"><span class="font-bold">Description: </span>${data.description} </p>
+    </div>
+`;
+document.getElementById("my_modal_5").showModal();
+}
 
 //byDefault Show trees
 const loadAllPlants = () => {
@@ -50,7 +72,7 @@ const showCategoryCardTreesByiD =(data)=>{
      <div class="card bg-white rounded-[10px] shadow-xl">
           <img src="${e.image}" class="h-46 w-[100%]  rounded-t-[10px]"></img>
           <div class="card-body p-4 pt-4">
-            <h2 class="card-title text-base">${e.name}</h2>
+            <h2 onclick="loadForTreesDetails(${e.id})" class="card-title text-base cursor-pointer hover:text-decoration-underline decoration-slate-400">${e.name}</h2>
             <p class="text-sm text-gray-500">
           ${e.description}
             </p>
