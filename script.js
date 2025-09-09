@@ -151,7 +151,7 @@ const showCategoryCardTreesByiD =(data)=>{
               <span class="badge badge-outline badge-sm md:badge-xs lg:badge-md  md:text-[10px] badge-success">${e.category}</span>
               <span class="font-semibold">$<span>${e.price}</span></span>
             </div>
-            <button class="btn btn-success w-full mt-3">Add to Cart</button>
+            <button class="btn btn-success w-full mt-3 text-white">Add to Cart</button>
           </div>
         </div>
     `;
